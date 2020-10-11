@@ -12,7 +12,7 @@ namespace Tradedoubler;
  * ...
  *
  * $token = ...;
- * $tradedoubler = new Tradedoubler($token);
+ * $client = new \Tradedoubler\Client($token);
  *
  * $params['language'] = 'es';
  * $response = $tradedoubler->getServiceData('advertisers.products.feed', $params);
@@ -179,7 +179,7 @@ class Client
 	 * @param array|null $params Optional array of parameters to be sent.
 	 * @return   string                     The final URL.
 	 */
-	public function buildEndpointURL(string $endpoint, array $params = null)
+	public function buildEndpointURL(string $endpoint, array $params = null): string
 	{
 		$url = self::BASE_URL . self::VERSION . $endpoint;
 
