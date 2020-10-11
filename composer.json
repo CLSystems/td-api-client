@@ -1,0 +1,32 @@
+{
+    "name": "clsystems/td-api-client",
+    "description": "Client library for Tradedoubler OpenAPI.",
+    "type": "library",
+    "version": "0.1.1",
+    "license": "MIT",
+    "keywords": [
+      "clsystems",
+      "tradedoubler",
+      "trade",
+      "tracking",
+      "ads",
+      "affiliate"
+    ],
+    "authors": [
+        {
+            "name": "Jeroen Guyt",
+            "email": "info@clsystems.nl"
+        }
+    ],
+    "require": {
+      "php": "^5.4.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.2"
+    },
+    "autoload": {
+      "psr-4": {
+        "Tradedoubler\\": "src/"
+      }
+    }
+}
