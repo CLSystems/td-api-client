@@ -1,6 +1,6 @@
 <?php
 
-namespace Tradedoubler;
+namespace CLSystems\Tradedoubler;
 
 /**
  * Tradedoubler.
