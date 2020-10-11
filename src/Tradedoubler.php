@@ -12,7 +12,7 @@ namespace CLSystems\Tradedoubler;
  * ...
  *
  * $token = ...;
- * $client = new \Tradedoubler\Client($token);
+ * $client = new \CLSystems\Tradedoubler\Client($token);
  *
  * $params['language'] = 'es';
  * $response = $tradedoubler->getServiceData('advertisers.products.feed', $params);
@@ -28,6 +28,7 @@ class Client
 	 */
 	const BASE_URL = 'http://api.tradedoubler.com/';
 	const VERSION  = '1.0';
+	const FORMAT   = '.json';
 
 	/** @var string $token Token to authenticate requests. */
 	private $token;
@@ -69,6 +70,9 @@ class Client
 				'unlimited'  => '/productsUnlimited',
 				'categories' => '/productCategories',
 				'feed'       => '/productFeeds',
+			],
+			'vouchers'    => [
+				'query' => '/vouchers',
 			],
 		],
 	];
@@ -240,7 +244,7 @@ class Client
 				return $this->searchEndpointRecursively($keys, $arr[$key], ++$i);
 			}
 
-			return $arr[$key];
+			return $arr[$key] . self::FORMAT;
 		}
 
 		return null;
