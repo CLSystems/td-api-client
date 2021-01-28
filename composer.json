@@ -2,7 +2,7 @@
     "name": "clsystems/td-api-client",
     "description": "Client library for Tradedoubler OpenAPI.",
     "type": "library",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "license": "MIT",
     "keywords": [
       "clsystems",
